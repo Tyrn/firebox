@@ -52,7 +52,7 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "morse.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -263,6 +263,9 @@ void StartTaskMorse(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+    b(); o(); x();
+    osDelay(DASH_DURATION * 4);
+
     osDelay(1);
   }
   /* USER CODE END StartTaskMorse */
